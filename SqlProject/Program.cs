@@ -13,7 +13,7 @@ string conString= "Data Source=SRV2\\PUPILS; Initial Catalog = Products_32602330
     table = Console.ReadLine();
     Console.WriteLine("What would you like to do, add rows or just see all rows? a/s ");
     action = Console.ReadLine();
-    if (table=="p"&& action=="a")
+    if (table=="p"&& action=="a")//add to products
     {
         Console.WriteLine("Start filling your store...");
         string c = "y";
@@ -29,13 +29,13 @@ string conString= "Data Source=SRV2\\PUPILS; Initial Catalog = Products_32602330
         dataAccess.readProducts(conString);
     }
 
-    else  if(table=="p"&& action=="s")
+    else  if(table=="p"&& action=="s")//see products
     {
         Console.WriteLine( "your amazing store :");
         dataAccess.readProducts(conString);
     }
 
-    else if(table == "c" && action == "a")
+    else if(table == "c" && action == "a")//add to categories
     {
         Console.WriteLine("Add categories...");
         string c = "y";
@@ -51,7 +51,7 @@ string conString= "Data Source=SRV2\\PUPILS; Initial Catalog = Products_32602330
         dataAccess.readCategories(conString);
     }
 
-    else if (table == "c" && action == "s")
+    else if (table == "c" && action == "s")//see categories
     {
         Console.WriteLine(" the categories in your amazing store :");
         dataAccess.readCategories(conString);
