@@ -14,13 +14,14 @@ namespace SqlProject
         public int insertProduct(string connectionString)
         {
             string name, description, image;
-            int categoryId,price;
+            int categoryId;
+            double price;
             Console.WriteLine("insert category id");
             categoryId = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("insert name");
             name = Console.ReadLine();
             Console.WriteLine("insert price");
-            price = Convert.ToInt32(Console.ReadLine());
+            price = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("insert description");
             description = Console.ReadLine();
             Console.WriteLine("insert image name");
@@ -33,7 +34,7 @@ namespace SqlProject
             {
                 cmd.Parameters.Add("@CategoryId", SqlDbType.Int).Value=categoryId;
                 cmd.Parameters.Add("@Name", SqlDbType.VarChar,30).Value = name;
-                cmd.Parameters.Add("@Price", SqlDbType.Int).Value = price;
+                cmd.Parameters.Add("@Price", SqlDbType.Float).Value = price;
                 cmd.Parameters.Add("@Description", SqlDbType.VarChar,100).Value = description;
                 cmd.Parameters.Add("@Image", SqlDbType.VarChar,20).Value = image;
 
