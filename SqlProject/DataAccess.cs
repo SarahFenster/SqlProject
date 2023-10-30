@@ -15,7 +15,7 @@ namespace SqlProject
         {
             string name, description, image;
             int categoryId;
-            double price;
+            double price;//changed
             Console.WriteLine("insert category id");
             categoryId = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("insert name");
